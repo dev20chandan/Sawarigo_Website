@@ -160,3 +160,78 @@ footer h4{font-size:12px;margin-bottom:8px} footer a,footer p{font-size:11px;col
 .scroll-top { position: fixed; bottom: -60px; right: 30px; background: var(--orange); color: #fff; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; font-size: 24px; cursor: pointer; z-index: 10000; transition: all 0.4s; box-shadow: 0 4px 15px rgba(255, 101, 0, 0.4); opacity: 0; pointer-events: none; }
 .scroll-top.visible { bottom: 30px; opacity: 1; pointer-events: auto; }
 .scroll-top:hover { transform: translateY(-5px); background: #fff; color: var(--orange); }
+
+.theme-toggle { display: flex; align-items: center; gap: 8px; background: transparent; border: none; font-size: 16px; font-weight: 800; cursor: pointer; padding: 5px; transition: transform 0.3s; color: var(--orange); }
+.theme-toggle:hover { transform: scale(1.05); }
+body.light-mode .theme-toggle { color: var(--orange); }
+
+/* --- Light Mode Overrides --- */
+body.light-mode { background: #FFF9F4; color: #171717; --orange: #FF6B00; --orange2: #E85D00; }
+body.light-mode header { background: rgba(255, 249, 244, 0.92); border-bottom: 1px solid #EDE1D8; }
+body.light-mode .navlinks { background: #FFF9F4; }
+@media(max-width:900px){ body.light-mode .navlinks { background: rgba(255, 249, 244, 0.98); } }
+body.light-mode .navlinks a { color: #555555; }
+body.light-mode .navlinks a:hover, body.light-mode .navlinks a.active { color: var(--orange); }
+body.light-mode .hamburger span { background: #171717; }
+body.light-mode .brand-logo { filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.2); mix-blend-mode: multiply; }
+
+body.light-mode .hero { background: #FFF9F4; }
+body.light-mode .hero:before { opacity: 1; background: repeating-linear-gradient(110deg, transparent 0 90px, rgba(255, 107, 0, 0.07) 91px 92px); }
+body.light-mode .hero-copy > p { color: #555555; }
+body.light-mode .btn.primary { box-shadow: 0 8px 20px rgba(255, 107, 0, 0.25); }
+body.light-mode .btn.secondary { background: #FFFFFF; color: #171717; border: 1px solid #EDE1D8; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+body.light-mode .btn.secondary:hover { background: #FFF9F4; border-color: #FF6B00; }
+
+body.light-mode .phone { background: #0a0a0a; border: 9px solid #FFFFFF; box-shadow: 0 0 0 1px #EDE1D8, 0 20px 40px rgba(0,0,0,0.08), 0 0 35px rgba(255,107,0,0.15); }
+body.light-mode .phone:before { background: #FFFFFF; border: 1px solid #EDE1D8; border-top: none; }
+body.light-mode .ride-card { background: #FFFFFF; color: #171717; border: 1px solid #EDE1D8; box-shadow: 0 8px 24px rgba(0,0,0,0.06); transition: all 0.3s; }
+body.light-mode .ride-card:hover { border-color: var(--orange); box-shadow: 0 8px 24px rgba(255,107,0,0.15); }
+
+body.light-mode .app-redesign, body.light-mode .about { background: #FFF9F4 !important; }
+body.light-mode .apps-container { background: #FFFFFF; border-color: #EDE1D8; box-shadow: 0 10px 40px rgba(0,0,0,0.04); }
+body.light-mode .apps-container > div:first-child > div:nth-child(2) { background: #FFFFFF !important; border: 1px solid #EDE1D8 !important; box-shadow: 0 10px 40px rgba(0,0,0,0.04) !important; }
+
+body.light-mode .how { background: #FFF9F4; color: #171717; }
+body.light-mode .how h2, body.light-mode .contact h2 { color: #171717; }
+body.light-mode .tab-btn { border-color: #EDE1D8; color: #555555; background: #FFFFFF; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
+body.light-mode .tab-btn.active { border-color: var(--orange); color: var(--orange); background: rgba(255,107,0,0.08); }
+body.light-mode .tab-btn:hover:not(.active) { color: #171717; border-color: #ccc; }
+body.light-mode .step p, body.light-mode p { color: #555555; }
+body.light-mode .feature-icon, body.light-mode .step-icon { background: #FFFFFF; border-color: #EDE1D8; }
+body.light-mode .feature-item b { color: #171717; }
+body.light-mode .feature-item small { color: #555555; }
+
+body.light-mode .phone-mockup { background: #0a0a0a !important; border: 8px solid #FFFFFF; box-shadow: 0 0 0 1px #EDE1D8, 0 25px 40px rgba(0,0,0,0.08), 0 0 35px rgba(255,107,0,0.15); }
+body.light-mode .phone-notch { background: #FFFFFF; border: 1px solid #EDE1D8; border-top: none; }
+body.light-mode .phone-mockup small { color: #FFFFFF !important; }
+body.light-mode .phone-mockup p { color: #AAAAAA !important; }
+body.light-mode .phone-mockup strong { color: var(--orange) !important; }
+body.light-mode .apps-mockups img { filter: contrast(1.1) !important; mix-blend-mode: screen !important; }
+
+body.light-mode .store-btn { background: #FFFFFF; border: 1px solid #EDE1D8; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+body.light-mode .store-text strong { color: #171717; }
+body.light-mode .store-text small { color: #555555; }
+
+body.light-mode .contact { background: #FFF9F4; }
+body.light-mode input, body.light-mode textarea { background: #FFFFFF; border: 1px solid #EDE1D8; color: #171717; }
+body.light-mode input:focus, body.light-mode textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(255,107,0,0.1); }
+body.light-mode .details b { color: #171717 !important; }
+body.light-mode .details span { color: #555555 !important; }
+
+body.light-mode footer { background: #FFF9F4; color: #171717; border-top: 1px solid #EDE1D8; }
+body.light-mode footer a, body.light-mode footer p { color: #555555; }
+body.light-mode footer h4 { color: #171717; }
+body.light-mode .copyright { border-top-color: #EDE1D8; color: #777777; }
+
+body.light-mode [style*="color:#fff"]:not(.phone-mockup *), body.light-mode [style*="color: #fff"]:not(.phone-mockup *) { color: #171717 !important; }
+body.light-mode [style*="color:#aaa"]:not(.phone-mockup *), body.light-mode [style*="color: #aaa"]:not(.phone-mockup *), 
+body.light-mode [style*="color:#ccc"]:not(.phone-mockup *), body.light-mode [style*="color: #ccc"]:not(.phone-mockup *), 
+body.light-mode [style*="color:#bbb"]:not(.phone-mockup *), body.light-mode [style*="color: #bbb"]:not(.phone-mockup *) { color: #555555 !important; }
+
+body.light-mode .stats { border-color: #EDE1D8 !important; }
+body.light-mode .stats .stat { border-left-color: #EDE1D8 !important; }
+body.light-mode .stat b, body.light-mode .benefit b { color: #171717 !important; }
+body.light-mode .benefit small { color: #555555; }
+body.light-mode footer svg { color: #555555 !important; }
+body.light-mode footer a:hover { color: var(--orange) !important; }
+body.light-mode footer a:hover svg { color: var(--orange) !important; }

@@ -15,14 +15,29 @@
         <img src="images/logo.png" alt="Sawarigo Captain" class="brand-logo" />
       </a>
       <div class="navlinks" id="navlinks">
-        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#home" class="active" onclick="toggleMenu()">Home</a>
         <a href="#about" onclick="toggleMenu()">About</a>
         <a href="#how" onclick="toggleMenu()">How It Works</a>
         <a href="#apps" onclick="toggleMenu()">Our Apps</a>
         <a href="#contact" onclick="toggleMenu()">Contact</a>
       </div>
       <div class="nav-right">
+
         <a class="nav-cta" href="#contact">✈ Coming Soon</a>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
         <div class="hamburger" onclick="toggleMenu()">
           <span></span><span></span><span></span>
         </div>
@@ -71,48 +86,83 @@
 
     <section class="app-redesign" style="padding-top:20px; padding-bottom:80px; background:#050505;" id="about">
       <div class="container apps-container" style="padding: 60px 50px; display: block;">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 45px; gap: 50px; flex-wrap: wrap;">
+        <div
+          style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 45px; gap: 50px; flex-wrap: wrap;">
           <!-- LEFT SIDE: Header & Intro -->
           <div style="flex: 1; min-width: 300px;">
-            <div class="pill eyebrow" style="display:inline-block; width:80px; height:8px; padding:0; border-radius:4px; margin-bottom:20px;"></div>
-            <h2 style="font-size: 36px; line-height: 1.15; margin-bottom: 25px;">Building better journeys<br><span>for every India.</span></h2>
-            <p style="color:#aaa; font-size:15px; line-height:1.7; margin-bottom: 20px;">Sawarigo is a modern ride-booking platform built to make everyday travel <strong style="color:#fff;">simple, safe, affordable, and reliable</strong>. Whether you need a <strong style="color:#fff;">Bike, Auto, or Car</strong>, Sawarigo helps you find the right ride for your journey with just a few taps.</p>
-            <p style="color:#aaa; font-size:15px; line-height:1.7;">We believe travelling should be stress-free and accessible to everyone. Our platform connects passengers with trusted drivers while focusing on <strong style="color:#fff;">fair pricing, quick bookings, transparent service, and passenger safety</strong>.</p>
+            <div class="eyebrow" style="margin-bottom:20px; text-transform:uppercase;">
+              about
+            </div>
+            <h2 style="font-size: 36px; line-height: 1.15; margin-bottom: 25px;">Building better journeys<br><span>for
+                every India.</span></h2>
+            <p style="color:#aaa; font-size:15px; line-height:1.7; margin-bottom: 20px;">Sawarigo is a modern
+              ride-booking platform built to make everyday travel <strong style="color:#fff;">simple, safe, affordable,
+                and reliable</strong>. Whether you need a <strong style="color:#fff;">Bike, Auto, or Car</strong>,
+              Sawarigo helps you find the right ride for your journey with just a few taps.</p>
+            <p style="color:#aaa; font-size:15px; line-height:1.7;">We believe travelling should be stress-free and
+              accessible to everyone. Our platform connects passengers with trusted drivers while focusing on <strong
+                style="color:#fff;">fair pricing, quick bookings, transparent service, and passenger safety</strong>.
+            </p>
           </div>
-          
+
           <!-- RIGHT SIDE: Why Choose Us Box -->
-          <div style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,101,0,0.15); border-radius: 20px; padding: 35px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-            <h3 style="color:var(--orange); font-size:22px; margin-bottom:20px; font-weight:900;">Why Choose Sawarigo?</h3>
+          <div
+            style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,101,0,0.15); border-radius: 20px; padding: 35px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+            <h3 style="color:var(--orange); font-size:22px; margin-bottom:20px; font-weight:900;">Why Choose Sawarigo?
+            </h3>
             <ul style="list-style:none; padding:0; margin:0; color:#ccc; font-size: 14px; line-height: 1.7;">
-              <li style="margin-bottom:14px;"><span style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong style="color:#fff;">Safe &amp; Secure</strong> – Your safety is always our priority.</li>
-              <li style="margin-bottom:14px;"><span style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong style="color:#fff;">Affordable Rides</strong> – Get reliable rides at competitive prices.</li>
-              <li style="margin-bottom:14px;"><span style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong style="color:#fff;">Quick Booking</strong> – Book your ride easily and save time.</li>
-              <li style="margin-bottom:14px;"><span style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong style="color:#fff;">Multiple Options</strong> – Choose Bike, Auto, or Car according to your needs.</li>
-              <li><span style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong style="color:#fff;">Reliable Service</strong> – We are committed to making every ride smooth.</li>
+              <li style="margin-bottom:14px;"><span
+                  style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong
+                  style="color:#fff;">Safe &amp; Secure</strong> – Your safety is always our priority.</li>
+              <li style="margin-bottom:14px;"><span
+                  style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong
+                  style="color:#fff;">Affordable Rides</strong> – Get reliable rides at competitive prices.</li>
+              <li style="margin-bottom:14px;"><span
+                  style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong
+                  style="color:#fff;">Quick Booking</strong> – Book your ride easily and save time.</li>
+              <li style="margin-bottom:14px;"><span
+                  style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong
+                  style="color:#fff;">Multiple Options</strong> – Choose Bike, Auto, or Car according to your needs.
+              </li>
+              <li><span style="color:var(--orange); margin-right:8px; font-weight:bold;">✓</span><strong
+                  style="color:#fff;">Reliable Service</strong> – We are committed to making every ride smooth.</li>
             </ul>
           </div>
         </div>
-        
+
         <!-- MIDDLE: Stats Row -->
-        <div class="stats" style="border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 40px 0; margin-bottom:45px;">
+        <div class="stats"
+          style="border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 40px 0; margin-bottom:45px;">
           <div class="stat" style="border-left:none;">
-            <div class="big" style="color:var(--orange);">♧</div><b style="color:#fff;">100%</b><small>Customer First</small>
+            <div class="big" style="color:var(--orange);">♧</div><b style="color:#fff;">100%</b><small>Customer
+              First</small>
           </div>
           <div class="stat">
-            <div class="big" style="color:var(--orange);">♢</div><b style="color:#fff;">Safe</b><small>&amp; Reliable</small>
+            <div class="big" style="color:var(--orange);">♢</div><b style="color:#fff;">Safe</b><small>&amp;
+              Reliable</small>
           </div>
           <div class="stat">
-            <div class="big" style="color:var(--orange);">₹</div><b style="color:#fff;">Affordable</b><small>Everyday</small>
+            <div class="big" style="color:var(--orange);">₹</div><b
+              style="color:#fff;">Affordable</b><small>Everyday</small>
           </div>
           <div class="stat">
-            <div class="big" style="color:var(--orange);">⌖</div><b style="color:#fff;">Pan India</b><small>Service</small>
+            <div class="big" style="color:var(--orange); display:flex; justify-content:center;"><svg width="1.2em"
+                height="1.2em" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+              </svg></div><b style="color:#fff;">Pan
+              India</b><small>Service</small>
           </div>
         </div>
 
         <!-- BOTTOM: Vision Quote -->
         <div style="text-align:center;">
-          <p style="font-size: 19px; color: #fff; font-style: italic; max-width: 700px; margin: 0 auto 20px; line-height: 1.6;">"To build a trusted mobility platform where <strong style="color:var(--orange);">every ride is safe, every price is fair, and every journey feels effortless</strong>."</p>
-          <div class="pill eyebrow" style="display:inline-block; background:rgba(255,106,0,0.1); padding: 8px 16px;">Sawarigo — Aapki Sawari, Hamari Zimmedaari.</div>
+          <p
+            style="font-size: 19px; color: #fff; font-style: italic; max-width: 700px; margin: 0 auto 20px; line-height: 1.6;">
+            "To build a trusted mobility platform where <strong style="color:var(--orange);">every ride is safe, every
+              price is fair, and every journey feels effortless</strong>."</p>
+          <div class="pill eyebrow" style="display:inline-block; background:rgba(255,106,0,0.1); padding: 8px 16px;">
+            Sawarigo — Aapki Sawari, Hamari Zimmedaari.</div>
         </div>
       </div>
     </section>
@@ -274,14 +324,9 @@
         </div>
 
         <div class="apps-footer">
-          <div class="store-btn">
-            <span class="play-icon" style="color:#4caf50;">▶</span>
-            <div class="store-text">
-              <small>GET IT ON</small>
-              <strong>Google Play</strong>
-              <small class="coming-soon">(COMING SOON)</small>
-            </div>
-          </div>
+          <a href="#">
+            <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="70" style="display: block;" />
+          </a>
         </div>
       </div>
     </section>
@@ -293,12 +338,22 @@
           <p>Have a question or want to partner with us?<br>Drop us a message and we'll get back to you.</p>
         </div>
         <form onsubmit="event.preventDefault(); alert('Thanks! We will get back to you.');">
-          <input placeholder="Your Name" required><input type="email" placeholder="Your Email" required><input
-            placeholder="Subject"><textarea placeholder="Your Message"></textarea><button>➤ &nbsp; Send Message</button>
+          <input placeholder="Your Name" required><input type="email" placeholder="Your Email" required><textarea placeholder="Your Message"></textarea><button>➤ &nbsp; Send Message</button>
         </form>
         <div class="details">
-          <div style="display:flex; align-items:center; gap:10px;"><span style="font-size: 28px; color: var(--orange);">✉</span> <div><b style="display:block; font-size:16px;">Support</b><span style="font-size:14px;">sawarigoapp@gmail.com</span></div></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="font-size: 32px; color: var(--orange);">⌖</span> <div><b style="display:block; font-size:16px;">Location</b><span style="font-size:14px;">India</span></div></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span
+              style="font-size: 28px; color: var(--orange);">✉</span>
+            <div><b style="display:block; font-size:16px;">Support</b><span
+                style="font-size:14px;">sawarigoapp@gmail.com</span></div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;"><span
+              style="font-size: 32px; color: var(--orange); display:flex;"><svg width="1em" height="1em"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+              </svg></span>
+            <div><b style="display:block; font-size:16px;">Location</b><span style="font-size:14px;">India</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -313,21 +368,37 @@
         <div>
           <h4>Legal</h4>
           <div style="display:flex; gap: 20px; align-items:center;">
-            <a href="terms.html" style="font-size:15px; display:inline-block; margin-bottom:0;">Terms &amp; Conditions</a>
+            <a href="terms.html" style="font-size:15px; display:inline-block; margin-bottom:0;">Terms &amp;
+              Conditions</a>
             <a href="#" style="font-size:15px; display:inline-block; margin-bottom:0;">Privacy Policy</a>
           </div>
         </div>
         <div>
           <h4>Follow Us</h4>
           <div style="display:flex; gap: 15px; margin-top:10px;">
-            <a href="https://www.facebook.com/profile.php?id=61592310495691" target="_blank" rel="noopener noreferrer" style="color:#aaa; transition:color 0.3s;" title="Facebook" onmouseover="this.style.color='#ff6500'" onmouseout="this.style.color='#aaa'">
-              <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-1.1 0-2 .9-2 2v1h3l-1 3h-2v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+            <a href="https://www.facebook.com/profile.php?id=61592310495691" target="_blank" rel="noopener noreferrer"
+              style="color:#aaa; transition:color 0.3s;" title="Facebook" onmouseover="this.style.color='#ff6500'"
+              onmouseout="this.style.color='#aaa'">
+              <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-1.1 0-2 .9-2 2v1h3l-1 3h-2v6.8c4.56-.93 8-4.96 8-9.8z" />
+              </svg>
             </a>
-            <a href="https://www.instagram.com/sawarigoapp?igsh=bjBlOHJobzJ2OWxv&igsi=bjBlOHJobzJ2OWxv&utm_source=qr" target="_blank" rel="noopener noreferrer" style="color:#aaa; transition:color 0.3s;" title="Instagram" onmouseover="this.style.color='#ff6500'" onmouseout="this.style.color='#aaa'">
-              <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.4 5.6 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.6 18.4 4 16.4 4H7.6zm4.4 4c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm5.2-2.4c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9z"/></svg>
+            <a href="https://www.instagram.com/sawarigoapp?igsh=bjBlOHJobzJ2OWxv&igsi=bjBlOHJobzJ2OWxv&utm_source=qr"
+              target="_blank" rel="noopener noreferrer" style="color:#aaa; transition:color 0.3s;" title="Instagram"
+              onmouseover="this.style.color='#ff6500'" onmouseout="this.style.color='#aaa'">
+              <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.4 5.6 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.6 18.4 4 16.4 4H7.6zm4.4 4c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm5.2-2.4c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9z" />
+              </svg>
             </a>
-            <a href="https://www.linkedin.com/in/sawari-go-8b6584426/" target="_blank" rel="noopener noreferrer" style="color:#aaa; transition:color 0.3s;" title="LinkedIn" onmouseover="this.style.color='#ff6500'" onmouseout="this.style.color='#aaa'">
-              <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            <a href="https://www.linkedin.com/in/sawari-go-8b6584426/" target="_blank" rel="noopener noreferrer"
+              style="color:#aaa; transition:color 0.3s;" title="LinkedIn" onmouseover="this.style.color='#ff6500'"
+              onmouseout="this.style.color='#aaa'">
+              <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -336,6 +407,31 @@
     </div>
   </footer>
   <script>
+    function updateThemeUI(isLightMode) {
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (!toggleBtn) return;
+      if (isLightMode) {
+        toggleBtn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+      } else {
+        toggleBtn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+      }
+    }
+
+    // Theme toggle initialization
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      updateThemeUI(document.body.classList.contains('light-mode'));
+    });
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      const isLightMode = document.body.classList.contains('light-mode');
+      localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+      updateThemeUI(isLightMode);
+    }
+
     function toggleMenu() {
       document.getElementById('navlinks').classList.toggle('active');
     }
@@ -346,7 +442,7 @@
       btns[0].classList.toggle('active', type === 'rider');
       btns[1].classList.toggle('active', type === 'captain');
     }
-    
+
     // ScrollSpy implementation for Active tab highlighting
     const sections = document.querySelectorAll("section[id]");
     window.addEventListener("scroll", () => {
@@ -386,7 +482,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
-  
+
   <div id="scrollTopBtn" class="scroll-top" onclick="scrollToTop()">
     ⇡
   </div>
