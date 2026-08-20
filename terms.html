@@ -4,36 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms & Conditions — Sawarigo</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .legal-content {
-      padding: 120px 0 60px;
-      color: #ccc;
-      line-height: 1.7;
+      padding: 120px 0 80px;
+      min-height: 80vh;
     }
-    .legal-content h1 {
-      font-size: 42px;
-      color: #fff;
-      margin-bottom: 40px;
+    .legal-container {
+      max-width: 900px;
+      margin: 0 auto;
     }
-    .legal-content h2 {
-      font-size: 24px;
-      color: var(--orange);
-      margin: 40px 0 15px;
-    }
-    .legal-content p {
-      margin-bottom: 15px;
-    }
-    .legal-content ul {
-      margin-left: 20px;
-      margin-bottom: 25px;
-    }
-    .legal-content li {
-      margin-bottom: 10px;
-    }
-    .legal-content strong {
-      color: #fff;
-    }
+    .legal-content h1 { font-size: 36px; margin-bottom: 20px; color: #fff; }
+    .legal-content .updated { color: var(--orange); font-size: 14px; font-weight: bold; margin-bottom: 40px; display: block; }
+    .legal-content h2 { font-size: 24px; margin-top: 40px; margin-bottom: 15px; color: var(--orange); }
+    .legal-content p, .legal-content li { font-size: 15px; line-height: 1.7; margin-bottom: 15px; color: #ccc; }
+    .legal-content ul { padding-left: 20px; margin-bottom: 25px; }
+    .legal-content a:hover { color: var(--orange); text-decoration: underline; }
+    
+    body.light-mode .legal-content h1 { color: #171717; }
+    body.light-mode .legal-content p, body.light-mode .legal-content li { color: #555555; }
+    body.light-mode .legal-content strong { color: #171717; }
   </style>
 </head>
 <body>
@@ -51,6 +42,9 @@
       </div>
       <div class="nav-right">
         <a class="nav-cta" href="index.html#contact">✈ Coming Soon</a>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <!-- SVG injected by JS -->
+        </button>
         <div class="hamburger" onclick="toggleMenu()">
           <span></span><span></span><span></span>
         </div>
@@ -60,8 +54,9 @@
 
   <main>
     <section class="legal-content">
-      <div class="container">
+      <div class="container legal-container">
         <h1>Terms & Conditions</h1>
+        <span class="updated">Last Updated: August 20, 2026</span>
         
         <p>Welcome to <strong>Sawarigo</strong>. By accessing or using the Sawarigo website, Rider App, Captain App, or any related services, you agree to be bound by these Terms & Conditions. Please read them carefully before using our services.</p>
 
@@ -219,7 +214,7 @@
           <h4>Legal</h4>
           <div style="display:flex; gap: 20px; align-items:center;">
             <a href="terms.html" style="font-size:15px; display:inline-block; margin-bottom:0;">Terms &amp; Conditions</a>
-            <a href="#" style="font-size:15px; display:inline-block; margin-bottom:0;">Privacy Policy</a>
+            <a href="privacy.html" style="font-size:15px; display:inline-block; margin-bottom:0;">Privacy Policy</a>
           </div>
         </div>
         <div>
@@ -241,6 +236,27 @@
     </div>
   </footer>
   <script>
+    function updateThemeUI(isLightMode) {
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (!toggleBtn) return;
+      if (isLightMode) {
+        toggleBtn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+      } else {
+        toggleBtn.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+      }
+    }
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      updateThemeUI(document.body.classList.contains('light-mode'));
+    });
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      const isLightMode = document.body.classList.contains('light-mode');
+      localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+      updateThemeUI(isLightMode);
+    }
     function toggleMenu() {
       document.getElementById('navlinks').classList.toggle('active');
     }
