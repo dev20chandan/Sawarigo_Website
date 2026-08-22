@@ -152,9 +152,22 @@ footer h4{font-size:12px;margin-bottom:8px} footer a,footer p{font-size:11px;col
   .apps-container{flex-direction:column;padding:30px 20px}.apps-content, .apps-mockups{width:100%}.apps-mockups{height:350px;margin-top:30px}.apps-features{grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}.phone-mockup.rider{left:50%;transform:translateX(-55%) rotate(-4deg)}.phone-mockup.captain{right:50%;transform:translateX(55%) rotate(6deg) scale(0.95)}.footer-grid{grid-template-columns:1fr 1fr;gap:30px}
 }
 @media(max-width:560px){
-  .container{padding:0 14px}h1{font-size:39px}.benefits{flex-direction:column;gap:12px}.steps{grid-template-columns:1fr}.stores{flex-direction:column;width:100%}.store{width:100%}
-  .stats{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .container{padding:0 14px}h1{font-size:36px}
+  .benefits{flex-direction:column;gap:12px}.steps{grid-template-columns:1fr}.stores{flex-direction:column;width:100%}.store{width:100%}
+  .stats{grid-template-columns:1fr 1fr;border:none !important;padding:20px 0 !important;gap:20px}.stat{border:none !important}
+  .footer-grid{grid-template-columns:1fr;gap:30px;display:flex;flex-direction:column;align-items:center;text-align:center}
   .buttons{flex-direction:column;gap:12px}.btn{text-align:center;width:100%}
+  
+  /* App Download Responsive Fix */
+  .apps-content h2{font-size:32px}
+  .apps-mockups{height:300px;margin-top:30px}
+  .phone-mockup{transform-origin:bottom center !important}
+  .phone-mockup.rider{left:50%;margin-left:-110px;transform:translateX(-22%) rotate(-5deg) scale(0.65) !important;bottom:0;}
+  .phone-mockup.captain{left:50%;margin-left:-110px;transform:translateX(25%) rotate(8deg) scale(0.6) !important;bottom:0;}
+
+  /* Contact Form Mobile Fix */
+  form{grid-template-columns:1fr}
+  input,textarea{grid-column:1/-1}
 }
 
 .scroll-top { position: fixed; bottom: -60px; right: 30px; background: var(--orange); color: #fff; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; font-size: 24px; cursor: pointer; z-index: 10000; transition: all 0.4s; box-shadow: 0 4px 15px rgba(255, 101, 0, 0.4); opacity: 0; pointer-events: none; }
